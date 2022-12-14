@@ -22,9 +22,11 @@ public class TicketBookingRestController {
 	})
 	public String bookTicket() {
 		System.out.println("TicketBookingRestController.bookTicket()");
-		if (new Random().nextInt(10) < 10) {
+		if (new Random().nextInt(10) < 5) {
 			throw new RuntimeException("Problem in b.logic");
 		}
+		
+		System.out.println("End Of Ticket Booking Operation");
 		return "output from b.logic";
 	}
 
